@@ -1,0 +1,131 @@
+:root{
+--Violet: hsl(257, 40%, 49%);
+--Soft-magenta: hsl(300, 69%, 71%);
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url('./images/bg-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--Violet);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-section{
+  margin: 20px 0 20px 50px;
+}
+.brand-logo{
+  width: 255px;
+  height:55px;
+}
+.container{
+  max-width: 100%;
+  display: flex;
+}
+.img-art{
+  margin: 0 0 0 50px;
+}
+.txt-section{
+  padding: 70px 50px 10px 50px
+}
+h1{
+  font-family: "Poppins",sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 2.5rem;
+}
+p{
+  font-family: "Open sans",sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1rem;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#btn{
+  font-family: "Poppins",sans-serif;
+  font-size: .9rem;
+  color: var(--Violet);
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 120px;
+  height: 45px;
+}
+#btn:hover{
+  color: #fff;
+  background-color: var(--Violet);
+  border: 1px solid #fff;
+  transition: all .5s ease;
+}
+.social-media{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 80px;
+  gap: 10px;
+}
+.links{
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  text-align: center;
+  padding-top: 10px;
+}
+.links:hover{
+background-color: var(--Soft-magenta);
+border: none;
+color: var(--Violet);
+transition: all .5s ease;
+}
+
+@media screen and (max-width:950px) {
+  body{
+    overflow: scroll;
+    justify-content: center;
+    background-image: url("./images/bg-mobile.svg");
+    background-size: contain;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo-section{
+    margin-left: 20px;
+    margin-bottom: 50px;
+  }
+  .brand-logo{
+    width:245;
+    height: 45px;
+  }
+  .img-art{
+    width: 366px;
+    height: 246px;
+    margin-left: 0;
+
+  }
+  h1{
+    font-size: 2rem;
+  }
+  #btn{
+    margin-top: 20px;
+  }
+  .social-media{
+    justify-content: center;
+    margin-right: 0;
+    margin-top: 30px;
+  }
+}
